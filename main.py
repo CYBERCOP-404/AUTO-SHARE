@@ -3,6 +3,8 @@ import os
 from time import sleep
 # import section end
 A = '\x1b[1;93m';Y = '\033[1;33m';G = '\033[1;96m';R = '\x1b[38;5;196m';B = '\x1b[38;5;8m';G1 = '\x1b[38;5;48m';G2 = '\x1b[38;5;47m';G3 = '\x1b[38;5;48m';X1 = '\x1b[38;5;14m';X2 = '\x1b[38;5;123m';X5 = '\x1b[38;5;121m'
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
 BANNER='''\033[0;32m
  $$$$$$\ $$\     $$\ $$$$$$$\  $$$$$$$$\ $$$$$$$\ 
 $$  __$$  $$\   $$  |$$  __$$\ $$  _____|$$  __$$\  
@@ -36,13 +38,33 @@ print(' [1] DO YOU WANT TO BUY THE TOOL  ')
 print('\033[1;34m [+] ENTER YOUR PASSWORD ')
 pass_ok=input(f'{A}【•】CHOICE ➤ \033[1;32m ')
 if pass_ok=='1':
-        os.system('python auto_share.py')
-elif pass_ok=='2':
-     breakpoint
+    os.system('clear')
+    print('FOLLOW MY GITHUB..............')
+    sleep(5)
+    os.system('clear')
+    os.system(f'xdg-open {url}')
+elif pass_ok =='119887':
+    while True:
+        clear_screen()
+        print(BANNER)
+        print(command_list)
+        CHOICE = input('\033[1;34m ENTER YOUR CHOICE : ')
+        if CHOICE =='1':
+            os.system('python auto_share.py')
+        elif CHOICE=='2':
+            break
+        else:
+            for i in range(10,0,-1):
+                sleep(0.5)
+                clear_screen()
+                print(BANNER)
+                print(comm)
+                print(f'TRY AFTER {i} SECOND')
+                sleep(0.5)
 else:
     for i in range(10,0,-1):
         sleep(0.5)
-        os.system('clear')
+        clear_screen()
         print(BANNER)
         print(comm)
         print(f'TRY AFTER {i} SECOND')
